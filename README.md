@@ -3,7 +3,6 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/ctrlabhi/portfolio)
   ![GitHub stars](https://img.shields.io/github/stars/ctrlabhi/portfolio?style=social)
   ![GitHub forks](https://img.shields.io/github/forks/ctrlabhi/portfolio?style=social)
-[![href="https://www.linkedin.com/in/ctrlabhi" target="blank"><img src="https://img.shields.io/twitter/follow/Abhishek?logo=Linkedin&label=Follow%20Me&link=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fctrlabhi" alt="Abhishek")
 <hr>
   <h1 align="center">Abhishek Kumar's Portfolio</h1>
 
