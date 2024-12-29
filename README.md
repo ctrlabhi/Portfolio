@@ -5,6 +5,7 @@
   ![GitHub forks](https://img.shields.io/github/forks/ctrlabhi/portfolio?style=social)
 <hr>
   <h1 align="center">Abhishek Kumar's Portfolio</h1>
+</div>
 
 ## 🔗 View  
 - **Website**: https://ctrlabhi.netlify.app/ 
