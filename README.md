@@ -4,7 +4,7 @@
 ![Forks](https://img.shields.io/github/forks/ctrlabhi/portfolio)  
 
 ## 🔗 View  
-- **Website**: [Portfolio](https://ctrlabhi.netlify.app/)  
+- **Website**: https://ctrlabhi.netlify.app/ 
 
 ## Overview  
 This portfolio showcases the journey, skills, and projects of **Abhishek Kumar**. Designed with simplicity and elegance, it provides a glimpse into Abhishek's expertise and work in software development, particularly in front-end and full-stack development.  
