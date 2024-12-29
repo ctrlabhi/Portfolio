@@ -1,7 +1,11 @@
-# Abhishek Kumar's Portfolio
+<div align="center">
 
-![Stars](https://img.shields.io/github/stars/ctrlabhi/portfolio)  
-![Forks](https://img.shields.io/github/forks/ctrlabhi/portfolio)  
+![GitHub repo size](https://img.shields.io/github/repo-size/ctrlabhi/portfolio)
+  ![GitHub stars](https://img.shields.io/github/stars/ctrlabhi/portfolio?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/ctrlabhi/portfolio?style=social)
+[![Linkedin Follow](https://img.shields.io/linkedin/i/ctrlabhi?style=social)](https://www.linkedin.com/in/ctrlabhi/)
+<hr>
+  <h1 align="center">Abhishek Kumar's Portfolio</h1>
 
 ## 🔗 View  
 - **Website**: https://ctrlabhi.netlify.app/ 
