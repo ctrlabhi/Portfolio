@@ -75,48 +75,45 @@ $(document).ready(function(){
 
 const downloadCV = document.getElementById("downloadCV");
 
-downloadCV.addEventListener("click", function () {
-    const passwordInput = document.createElement("input");
+if (downloadCV) {
+    downloadCV.addEventListener("click", function () {
+        const passwordInput = document.createElement("input");
 
-    passwordInput.type = "password";
-    passwordInput.id = "cvPasswordInput";
-    passwordInput.placeholder = "Enter Password";
-    passwordInput.setAttribute("aria-label", "Enter Password");
+        passwordInput.type = "password";
+        passwordInput.placeholder = "Enter Password";
+        passwordInput.setAttribute("aria-label", "Enter Password");
 
-    passwordInput.style.cssText = `
-        display: inline-block;
-        background: white;
-        color: #222;
-        font-family: inherit;
-        font-size: 20px;
-        font-weight: 500;
-        padding: 10px 30px;
-        margin-top: 20px;
-        border: 2px solid crimson;
-        border-radius: 6px;
-        box-sizing: border-box;
-        width: 224px;
-        height: 56px;
-        outline: none;
-    `;
+        passwordInput.style.cssText = `
+            display: inline-block;
+            background: white;
+            color: #222;
+            font-family: inherit;
+            font-size: 20px;
+            padding: 10px 16px;
+            margin-top: 20px;
+            border: 2px solid crimson;
+            border-radius: 6px;
+            box-sizing: border-box;
+            width: 224px;
+            height: 56px;
+        `;
 
-    downloadCV.replaceWith(passwordInput);
-    passwordInput.focus();
+        downloadCV.replaceWith(passwordInput);
+        passwordInput.focus();
 
-    passwordInput.addEventListener("keydown", function (event) {
-        if (event.key !== "Enter") return;
+        passwordInput.addEventListener("keydown", function (event) {
+            if (event.key !== "Enter") return;
 
-        if (passwordInput.value === "February") {
-            window.open(
-                "https://drive.google.com/file/d/1tjMJfVXhOtt1KprI2sQ8wVfKUMa3olRB/view?usp=drivesdk"
-            );
-        } else {
-            passwordInput.value = "";
-            passwordInput.placeholder = "Incorrect Password";
-            passwordInput.focus();
-        }
+            if (passwordInput.value === "February") {
+                window.open(
+                    "https://drive.google.com/file/d/1tjMJfVXhOtt1KprI2sQ8wVfKUMa3olRB/view?usp=drivesdk",
+                    "_blank"
+                );
+            } else {
+                passwordInput.value = "";
+                passwordInput.placeholder = "Incorrect Password";
+                passwordInput.focus();
+            }
+        });
     });
-});
-;
-    }
-});
+}
