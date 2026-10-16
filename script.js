@@ -105,6 +105,7 @@ if (downloadCV) {
             font-size: ${buttonStyle.fontSize};
             font-weight: ${buttonStyle.fontWeight};
             line-height: normal;
+            text-align: center;
             outline: none;
         `;
 
