@@ -73,17 +73,50 @@ $(document).ready(function(){
 });
 // Password Protected CV Download
 
-document.getElementById("downloadCV").addEventListener("click", function () {
-    const password = prompt("Enter Password");
+const downloadCV = document.getElementById("downloadCV");
 
-    if (password === null) return;
+downloadCV.addEventListener("click", function () {
+    const passwordInput = document.createElement("input");
 
-    if (password === "February") {
-        window.open(
-            "https://drive.google.com/file/d/1tjMJfVXhOtt1KprI2sQ8wVfKUMa3olRB/view?usp=drivesdk",
-            "_blank"
-        );
-    } else {
-        alert("Incorrect password");
+    passwordInput.type = "password";
+    passwordInput.id = "cvPasswordInput";
+    passwordInput.placeholder = "Enter Password";
+    passwordInput.setAttribute("aria-label", "Enter Password");
+
+    passwordInput.style.cssText = `
+        display: inline-block;
+        background: white;
+        color: #222;
+        font-family: inherit;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 10px 30px;
+        margin-top: 20px;
+        border: 2px solid crimson;
+        border-radius: 6px;
+        box-sizing: border-box;
+        width: 224px;
+        height: 56px;
+        outline: none;
+    `;
+
+    downloadCV.replaceWith(passwordInput);
+    passwordInput.focus();
+
+    passwordInput.addEventListener("keydown", function (event) {
+        if (event.key !== "Enter") return;
+
+        if (passwordInput.value === "February") {
+            window.open(
+                "https://drive.google.com/file/d/1tjMJfVXhOtt1KprI2sQ8wVfKUMa3olRB/view?usp=drivesdk"
+            );
+        } else {
+            passwordInput.value = "";
+            passwordInput.placeholder = "Incorrect Password";
+            passwordInput.focus();
+        }
+    });
+});
+;
     }
 });
