@@ -78,7 +78,7 @@ document.getElementById("downloadCV").addEventListener("click", function () {
 
     if (password === null) return;
 
-    if (password === "Abhishek229") {
+    if (password === "February") {
         window.open(
             "https://drive.google.com/file/d/1tjMJfVXhOtt1KprI2sQ8wVfKUMa3olRB/view?usp=drivesdk",
             "_blank"
