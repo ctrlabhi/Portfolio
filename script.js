@@ -84,7 +84,7 @@ if (downloadCV) {
 
         passwordInput = document.createElement("input");
         passwordInput.type = "password";
-        passwordInput.placeholder = "Enter Password";
+        passwordInput.placeholder = "Password";
         passwordInput.setAttribute("aria-label", "Password");
 
         // Keep the original button's dimensions and styling
