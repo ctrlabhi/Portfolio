@@ -71,3 +71,15 @@ $(document).ready(function(){
         }
     });
 });
+// Password Protected CV Download
+document.getElementById("downloadCV").addEventListener("click", function () {
+    const password = prompt("Enter password to download CV:");
+
+    if (password === null) return;
+
+    if (password === "Abhishek229") {
+        window.location.href = "https://drive.google.com/file/d/1tjMJfVXhOtt1KprI2sQ8wVfKUMa3olRB/view?usp=drivesdk";
+    } else {
+        alert("Incorrect Password!");
+    }
+});
