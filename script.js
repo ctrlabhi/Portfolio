@@ -72,14 +72,43 @@ $(document).ready(function(){
     });
 });
 // Password Protected CV Download
-document.getElementById("downloadCV").addEventListener("click", function () {
-    const password = prompt("Enter password to download CV:");
 
-    if (password === null) return;
+const downloadCV = document.getElementById("downloadCV");
+const cvPasswordBox = document.getElementById("cvPasswordBox");
+const cvPassword = document.getElementById("cvPassword");
+const verifyCVPassword = document.getElementById("verifyCVPassword");
+const cvPasswordError = document.getElementById("cvPasswordError");
 
-    if (password === "Abhishek229") {
-        window.location.href = "https://drive.google.com/file/d/1tjMJfVXhOtt1KprI2sQ8wVfKUMa3olRB/view?usp=drivesdk";
+downloadCV.addEventListener("click", function () {
+    cvPasswordBox.style.display =
+        cvPasswordBox.style.display === "none" ? "flex" : "none";
+
+    cvPasswordError.textContent = "";
+
+    if (cvPasswordBox.style.display === "flex") {
+        cvPassword.focus();
+    }
+});
+
+verifyCVPassword.addEventListener("click", function () {
+    if (cvPassword.value === "Abhishek229") {
+        window.open(
+            "https://drive.google.com/file/d/1tjMJfVXhOtt1KprI2sQ8wVfKUMa3olRB/view?usp=drivesdk",
+            "_blank"
+        );
+
+        cvPasswordBox.style.display = "none";
+        cvPassword.value = "";
+        cvPasswordError.textContent = "";
     } else {
-        alert("Incorrect Password!");
+        cvPasswordError.textContent = "Incorrect password. Try again.";
+        cvPassword.value = "";
+        cvPassword.focus();
+    }
+});
+
+cvPassword.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        verifyCVPassword.click();
     }
 });
