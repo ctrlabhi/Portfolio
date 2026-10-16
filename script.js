@@ -71,31 +71,41 @@ $(document).ready(function(){
         }
     });
 });
-// Password Protected CV Download
 
+/* Password Protected CV Download */
 const downloadCV = document.getElementById("downloadCV");
 
 if (downloadCV) {
-    downloadCV.addEventListener("click", function () {
-        const passwordInput = document.createElement("input");
+    const originalButtonHTML = downloadCV.innerHTML;
+    let passwordInput = null;
 
+    downloadCV.addEventListener("click", function () {
+        if (passwordInput) return;
+
+        passwordInput = document.createElement("input");
         passwordInput.type = "password";
         passwordInput.placeholder = "Enter Password";
         passwordInput.setAttribute("aria-label", "Enter Password");
 
+        // Keep the original button's dimensions and styling
+        const buttonStyle = window.getComputedStyle(downloadCV);
+
         passwordInput.style.cssText = `
             display: inline-block;
-            background: white;
-            color: #222;
-            font-family: inherit;
-            font-size: 20px;
-            padding: 10px 16px;
-            margin-top: 20px;
-            border: 2px solid crimson;
-            border-radius: 6px;
+            width: ${downloadCV.offsetWidth}px;
+            height: ${downloadCV.offsetHeight}px;
             box-sizing: border-box;
-            width: 224px;
-            height: 56px;
+            background: white;
+            color: crimson;
+            border: 2px solid crimson;
+            border-radius: ${buttonStyle.borderRadius};
+            padding: ${buttonStyle.padding};
+            margin: ${buttonStyle.margin};
+            font-family: ${buttonStyle.fontFamily};
+            font-size: ${buttonStyle.fontSize};
+            font-weight: ${buttonStyle.fontWeight};
+            line-height: normal;
+            outline: none;
         `;
 
         downloadCV.replaceWith(passwordInput);
